@@ -1,0 +1,164 @@
+@media (max-width: 992px) {
+    .container {
+        max-width: 710px;
+        padding: 0 28px;
+        margin: 0 auto;
+      }
+
+    .header {
+        &__link {
+            font-size: 14px;
+        }
+        &__logo {
+            background-image: url(../images/logo-table.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 90px;
+            height: 30px;
+        }
+
+        &__bid {
+            display: none;
+          }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+
+            &_hidden {
+                display: none;
+            }
+        }
+
+        &__comprassion {
+            margin-right: 10px;
+        }
+    } 
+
+    .contacts {
+        &__title {
+            padding: 15px 0;
+            font-size: 32px;
+        }
+
+        &__list {
+            padding-top: 16px;
+            padding-bottom: 18px;
+          } 
+    }
+
+    .about-us {
+        width: 40%;
+
+        &__tel {
+          font-size: 28px;
+          line-height: 120%;
+        }
+      
+        &__name {
+          font-size: 14px;
+          line-height: 140%;
+        }
+      
+        &__list {
+          flex-direction: column;
+          gap: 20px;
+        }
+      
+        &__data {
+          margin: 0;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 150%;
+          color: #808080;
+        }
+    }
+
+    .questions {
+        &__title {
+            font-size: 28px;
+            line-height: 120%;
+        }
+      
+        &__inputs {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+      
+        &__input-container {
+            width: 100%;
+        }
+
+        &__name {
+          width: 100%;
+        }
+      
+        &__tel {
+          width: 100%;
+        }
+      
+        &__text {
+          height: 166px;
+        }
+      }
+
+      
+    .checkbox__label_span::before {
+        padding-right: 20px;
+    }
+
+    .checkbox__label_span::after {
+        top: 42%;
+    }
+
+    .grayscale {
+        height: 480px;
+      }
+
+    .cities__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .items__link {
+        font-family: "Akzidenz-Grotesk Pro", sans-serif;
+        font-size: 20px;
+        line-height: 170%;
+    }
+
+
+    .ring {
+        flex-direction: column;
+
+        &__tel {
+            font-size: 23px;
+            line-height: 150%;
+        }
+    
+        &__email {
+            font-family: "Akzidenz-Grotesk Pro", sans-serif;
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 110%;
+        }
+
+        &__list {
+            margin-bottom: 10px;
+        }
+
+        &__button {
+            width: 193px;
+        }
+    }
+
+    .footer__address {
+        font-family: "Inter", sans-serif;
+    }
+}

@@ -1,0 +1,141 @@
+@media (max-width: 600px) {
+    .container {
+        max-width: 420px;
+        padding: 0 16px;
+        margin: 0 auto;
+      }
+
+    .header {
+        &__nav {
+            display: none;
+        }
+
+        &__logo {
+            background-image: url(../images/logo-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 68px;
+            height: 40px;
+        }
+
+        &__comprassion {
+            margin-right: 26px;
+        }
+
+        &__contacts {
+            display: none;
+        }
+    }
+
+    .contacts {
+        &__title {
+            padding: 20px 0;
+            font-size: 22px;
+        }
+
+        &__list {
+            padding: 16px 0;
+          } 
+    }
+
+    .question {
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        &__container {
+            flex-direction: column;
+        }
+    }
+
+    .about-us {
+        width: 100%;
+
+        &__list {
+            margin-bottom: 50px;
+        }
+    }
+
+    .questions {
+        width: 100%;
+
+        &__title {
+            font-size: 20px;
+        }
+    }
+
+    .grayscale {
+        height: 477px;
+      }
+
+    .cities {
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        &__card-large {
+            grid-column: 1;
+            height: 395px;
+        }
+
+        &__tels {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .footer {
+        background: linear-gradient(to bottom,  #222225 50%,  #2a2a2e 50%);
+
+        &__list {
+            gap: 20px;
+        }
+    }
+
+    .footer__container {
+        flex-direction: column;
+
+        &:before {
+
+            top: 90%;
+        }
+    }
+
+    .footer__left {
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer__right {
+        padding: 0;
+        padding-top: 43px;
+        padding-bottom: 28px;
+    }
+
+    .desktop-visibility {
+        display: none;
+    }
+
+    .mobile-visibility {
+        display: inline;
+        margin-bottom: 10px;
+      }
+
+    .ring__button {
+        padding: 16px 27px;
+    }
+
+    .ring__email {
+        margin-bottom: 42px;
+    }
+
+    .footer__address {
+        margin-bottom: 50px;
+    }
+
+    .items__list {
+        margin-bottom: 20px;
+    }
+}
