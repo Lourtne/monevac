@@ -192,3 +192,40 @@ function init() {
     myMap.controls.remove('zoomControl');
     myMap.controls.remove('rulerControl');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const telInputs = document.querySelectorAll('.questions__tel');
+
+    telInputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            // Удаляем все символы, кроме цифр
+            let value = this.value.replace(/\D/g, '');
+
+            // Если значение меньше 1, просто очищаем поле
+            if (value.length < 1) {
+                this.value = '';
+                return;
+            }
+
+            // Форматируем номер в нужный формат
+            let formattedValue = '';
+            if (value.length > 0) {
+                formattedValue += value[0]; // X
+            }
+            if (value.length > 1) {
+                formattedValue += '(' + value.substring(1, 4); // (XXX
+            }
+            if (value.length >= 4) {
+                formattedValue += ')' + value.substring(4, 7); // )XXX
+            }
+            if (value.length >= 7) {
+                formattedValue += '-' + value.substring(7, 9); // -XX
+            }
+            if (value.length >= 9) {
+                formattedValue += '-' + value.substring(9, 11); // -XX
+            }
+
+            this.value = formattedValue;
+        });
+    });
+});

@@ -63,6 +63,10 @@ img {
   display: none;
 }
 
+.desktop-vivibility {
+  display: block;
+}
+
 /*header*/
 .header {
   padding: 14px 0;
@@ -291,7 +295,7 @@ img {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 25px;
-    color: $red-link;
+    color: #bf2738;
     transition: .2s;
 
     &:hover {
@@ -546,7 +550,7 @@ img {
     height: 310px; 
 
     &-large {
-      grid-column: span 2; /* Занимает 2 колонки */
+      grid-column: span 2; 
     }
   }
 
@@ -556,16 +560,19 @@ img {
     font-family: $font-roadradio;
     font-weight: 400;
     font-size: 26px;
+    font-style: normal;
     line-height: 110%;
     color: $color-text;
+    font-style: normal
   }
 
   &__tel {
     font-weight: 400;
     font-size: 19px;
     line-height: 150%;
+    font-style: normal;
     color: $color-text;
-    transition: .2s;
+    transition: .3s;
 
     &:hover {
       color: $red-hover;
@@ -577,6 +584,7 @@ img {
     padding-top: 10px;
     font-weight: 400;
     font-size: 14px;
+    font-style: normal;
     line-height: 140%;
     color: $color-text-add;
   }
@@ -584,6 +592,7 @@ img {
   &__route {
     font-weight: 400;
     font-size: 14px;
+    font-style: normal;
     line-height: 140%;
     color: $red;
     transition: .2s;
@@ -610,45 +619,43 @@ img {
   position: relative;
   background: linear-gradient(to right,  #222225 50%,  #2a2a2e 50%);
 
-  &__container {
-    &::before { 
-      content: " ";
-      background: #fff;
-      opacity: 0.1;
-      width: 100%;
-      height: 1px;
-      right: 0;
-      top: 86%;
-      position: absolute;
-  }
-  }
+  &::before { 
+    content: " ";
+    background: #fff;
+    opacity: 0.1;
+    width: 100%;
+    height: 1px;
+    right: 0;
+    bottom: 68px;
+    position: absolute;
+}
 
   &__address {
+    margin-top: auto;
+    padding-left: 20%;
+    margin-bottom: 97px;
     font-family: $font-akzidenz;
     font-weight: 400;
     font-size: 16px;
+    font-style: normal;
     line-height: 130%;
     color: #fff;
   }
 
   &__left {
-    padding: 43px 82px 27px 0;
+    padding: 63px 0 31px 0;
     flex: 1;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    height: 467px;
-  }
-
-  &__right {
-    flex: 1;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    padding-right: 156px;
+    gap: 12px;
     row-gap: 0;
+    margin-bottom: 66px;
   }
 
   &__link {
@@ -662,6 +669,10 @@ img {
     &:hover {
       color: #fff;
     }
+  }
+
+  &__copyrights {
+    flex-direction: column;
   }
 
   &__copyright {
@@ -687,30 +698,44 @@ img {
   }
 
   &__right {
-    padding: 43px 0 27px 40px;
+    padding: 63px 0 33px 0px;
     flex: 1;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    height: 467px;
+  }
+
+  &__copyrights {
+    background: #2a2a2e;
+    padding-bottom: 21px;
+  }
+
+  &__copyright-right {
+    margin-left: 20%;
   }
 }
 
-.items__link {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-  color: #fff;
-  transition: .2s;
+.items {
+  &__list {
+    margin-bottom: 69px;
+  }
 
-  &:hover {
-    color: $red-hover;
+  &__link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: #fff;
+    transition: .3s;
+  
+    &:hover {
+      color: $red-hover;
+    }
   }
 }
 
 .ring {
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 20%;
 
   &__list {
     margin-bottom: 20px;
@@ -721,7 +746,7 @@ img {
     font-size: 30px;
     line-height: 130%;
     color: #fff;
-    transition: .2s;
+    transition: .3s;
 
     &:hover {
       color: $red-hover;
@@ -729,9 +754,8 @@ img {
   }
 
   &__button {
-    margin-bottom: 10px;
-    margin-right: 5px;
     padding: 19px 27px;
+    margin-bottom: 10px;
     height: 52px;
     font-family: $font-roadradio;
     font-weight: 400;
@@ -741,7 +765,7 @@ img {
     background: #2a2a2e;
     border: 2px solid #494950;
     border-radius: 14px;
-    transition: .2s;
+    transition: .3s;
 
     &:hover {
       color: #2a2a2e;
@@ -760,12 +784,12 @@ img {
   }
 
   &__email {
-    padding-top: 8px;
+    padding-left: 20%;
     font-weight: 400;
     font-size: 24px;
     line-height: 140%;
     color: $red-link;
-    transition: .2s;
+    transition: .3s;
 
     &:hover {
       color: #fff;

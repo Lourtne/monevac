@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .container {
         max-width: 420px;
         padding: 0 16px;
@@ -68,6 +68,8 @@
       }
 
     .cities {
+        padding-top: 31px;
+        padding-bottom: 50px;
         &__list {
             display: grid;
             grid-template-columns: 1fr;
@@ -86,56 +88,92 @@
     }
 
     .footer {
-        background: linear-gradient(to bottom,  #222225 50%,  #2a2a2e 50%);
+        background-image: linear-gradient(to bottom, #222225 46%, #2a2a2e 46%, #2a2a2e 100%);
 
+        &::before { 
+            height: 0;
+        }
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__left {
+            padding: 0;
+            padding-top: 41px;
+            padding-bottom: 40px;
+        } 
+
+        &__right {
+            padding: 0;
+            padding-top: 43px;
+            padding-bottom: 0;
+        }
+        
         &__list {
-            gap: 20px;
+            gap: 33px;
+            row-gap: 0;
         }
-    }
 
-    .footer__container {
-        flex-direction: column;
-
-        &:before {
-
-            top: 90%;
+        &__copyrights {
+            background: #2a2a2e;
+            padding-bottom: 28px;
         }
-    }
+        
+        &__address {
+            padding-left: 0;
+            margin-bottom: 50px;
+        }
 
-    .footer__left {
-        padding: 0;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .footer__right {
-        padding: 0;
-        padding-top: 43px;
-        padding-bottom: 28px;
-    }
-
-    .desktop-visibility {
-        display: none;
+        &__copyright-left {
+            margin-bottom: 10px;
+        }
+        
+        &__line {
+            margin-bottom: 20px;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
     }
 
     .mobile-visibility {
         display: inline;
         margin-bottom: 10px;
-      }
-
-    .ring__button {
-        padding: 16px 27px;
     }
 
-    .ring__email {
-        margin-bottom: 42px;
-    }
-
-    .footer__address {
-        margin-bottom: 50px;
+    .ring {
+        padding-left: 0;
+            &__button {
+                padding: 16px 27px;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        
+            &__email {
+                padding-left: 0;
+                padding-top: 0;
+                margin-bottom: 42px;
+            }
+        
+            &__list {
+                margin-bottom: 20px;
+            }
     }
 
     .items__list {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+    }
+
+    .copyrights__container {
+        flex-wrap: wrap;
+    }
+
+    .extra-footer {
+        background-color: #2a2a2e;
+        padding-bottom: 28px;
+    }
+
+    .desktop-vivibility {
+        display: none;
     }
 }
